@@ -1,0 +1,27 @@
+name: Retrain and Validate
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate synthetic loan data
+        run: python 01_generate_data.py
+
+      - name: Train credit risk model
+        run: python 02_train_model.py
+
+      - name: Validate model KPIs
+        run: python 05_validate_model.py

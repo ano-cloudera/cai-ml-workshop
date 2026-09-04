@@ -1,0 +1,11 @@
+pandas
+numpy<2.0
+scikit-learn==1.3.0
+xgboost==1.7.6
+flask
+joblib==1.3.2
+gunicorn
+requests
+streamlit
+# mlflow is pre-installed in Cloudera AI via mlflow-cml-plugin.
+# Do NOT add mlflow here — installing a newer version breaks the CML plugin.
