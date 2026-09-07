@@ -4,6 +4,32 @@ An end-to-end machine learning project that predicts the probability of a borrow
 
 ---
 
+## Audience and Scope
+
+This is a **beginner-oriented** workshop: a self-contained MLOps lifecycle
+demo using synthetic data, with no dependency on an external Data Lake or
+production data source. If you've never run a training job, registered a
+model, or deployed an endpoint in Cloudera AI before, this is built for you.
+
+If you're looking for an advanced, production-shaped reference, note what
+this workshop deliberately does not cover today:
+
+- **Feature engineering and a feature store** — planned, see
+  [specs/06-feature-engineering-store](specs/06-feature-engineering-store/spec.md)
+- **API-driven CI/CD** that reaches from GitHub into a real CML workspace
+  (today's `.github/workflows/retrain.yml` runs entirely on GitHub's own
+  runner) — planned, see
+  [specs/05-cicd-api-trigger](specs/05-cicd-api-trigger/spec.md)
+- **Job orchestration as code** rather than manual click-through setup —
+  planned, see
+  [specs/04-jobs-as-code](specs/04-jobs-as-code/spec.md)
+
+Model monitoring is already covered: see
+[Model Monitoring & Drift Detection](#model-monitoring--drift-detection)
+below.
+
+---
+
 ## Project Overview
 
 Credit risk scoring is a core use case in financial services. This project demonstrates:
